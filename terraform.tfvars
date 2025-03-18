@@ -1,5 +1,5 @@
 region               = "eu-west-2"
-account_id           = "412381775336"
+account_id           = "412*****336"
 az1                  = "eu-west-2a"
 az2                  = "eu-west-2b"
 ami                  = "ami-00710ab5544b60cf7" # Amazon Linux for "eu-west-2" Region
