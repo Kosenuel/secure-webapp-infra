@@ -6,10 +6,10 @@ resource "aws_cloudwatch_event_rule" "sftp_to_s3_rule" {
 }
 
 # Explicitly create a log group for the 'S3 to SFTP' Lambda function
-# resource "aws_cloudwatch_log_group" "s3_to_sftp_lambda_log_group" {
-#   name = "/aws/lambda/s3-to-sftp-lambda"
-#   retention_in_days = 14
-# }
+resource "aws_cloudwatch_log_group" "s3_to_sftp_lambda_log_group" {
+  name = "/aws/lambda/s3-to-sftp-lambda"
+  retention_in_days = 14
+}
 
 resource "aws_cloudwatch_event_target" "sftp_to_s3_target" {
   rule      = aws_cloudwatch_event_rule.sftp_to_s3_rule.name
